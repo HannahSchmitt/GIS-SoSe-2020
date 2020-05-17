@@ -4,42 +4,30 @@
 <head>
 	<meta charset="utf-8" />
 	<title>About Me - Hannah Schmitt</title>
-	<style>
-		body {
-			font-family: Cambria;
-			font-size: 20px;
-			background: #d18f8f
-		}
-
-		.centered {
-			text-align: center
-		}
-	</style>
+	<link rel="stylesheet" href="../Style.css">
 </head>
 
 <body>
 	<header>
-
-		<div class="centered">
-			<h1 id="überschrift">About Me</h1>
-			<nav>
-				<h3>
-					<a href="http://127.0.0.1:5500/Aufgabe02/Portfolio.html">Portfolio</a>
-					&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
-					<a href="http://127.0.0.1:5500/Aufgabe02/Contact/Contact.html">Contact</a>
-					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-					<a href="http://127.0.0.1:5500/Aufgabe02/AboutMe/About_Me.html">About Me</a>
-				</h3>
-			</nav>
-			<hr>
+		<nav class="topnav">
+			<h3 id="überschrift">
+				<a href="../Portfolio.html" class="button">Portfolio</a>
+				&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
+				<a href="../Contact/Contact.html" class="button">Contact</a>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				<a href="About_Me.html" class="button" id="aktuell">About Me</a>
+			</h3>
+		</nav>
+		<div class="halbkreis">
+			<h1 class="headline" >About Me
+			</h1>
 		</div>
 
 	</header>
 	<main>
-
-		<div class="centered">
-			<img src="HannahSchmitt.jpg" alt="Bild Hannah" />
-
+		
+			<img src="HannahSchmitt.jpg" alt="Bild Hannah" class="bildchild" class="bildparent"/>
+			
 			<h3>Ich bin Hannah Schmitt</h3>
 			<br>
 			<p>bin 21 Jahre alt und komme aus dem schönen
@@ -83,12 +71,9 @@
 				<br>
 				<br>
 				<br>
-		</div>
 
 	</main>
 	<footer>
-
-		<div class="centered">
 			<nav>
 				<h2>
 					Carpe
@@ -98,11 +83,8 @@
 					Diem
 				</h2>
 			</nav>
-		</div>
 		<nav>
-			<p style="text-align:right;">
-				Hannah Schmitt &#169; 2020
-			</p>
+			<p> Hannah Schmitt &#169; 2020 </p>
 		</nav>
 	</footer>
 </body>

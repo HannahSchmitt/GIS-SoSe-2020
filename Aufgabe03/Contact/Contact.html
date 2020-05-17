@@ -4,91 +4,48 @@
 <head>
 	<meta charset="utf-8" />
 	<title>Contact</title>
-	<style>
-		body {
-			font-family: Cambria;
-			font-size: 20px;
-			background: #d18f8f
-		}
-
-		.centered {
-			text-align: center
-		}
-	</style>
+	<link rel="stylesheet" href="../Style.css">
 </head>
 
 <body>
 	<header>
-		<div class="centered">
-
-			<h1 id="überschrift">Contact</h1>
-			<nav>
-				<h3>
-
-					<a href="http://127.0.0.1:5500/Aufgabe02/Portfolio.html">Portfolio</a>
-					&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
-					<a href="http://127.0.0.1:5500/Aufgabe02/Contact/Contact.html">Contact</a>
-					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-					<a href="http://127.0.0.1:5500/Aufgabe02/AboutMe/About_Me.html">About Me</a>
-				</h3>
-			</nav>
-			<hr>
+		<nav class="topnav">
+			<h3 id="überschrift">
+				<a href="../Portfolio.html" class="button">Portfolio</a>
+				&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
+				<a href="Contact.html" class="button" id="aktuell">Contact</a>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				<a href="../AboutMe/About_Me.html" class="button">About Me</a>
+			</h3>
+		</nav>
+		<div class="halbkreis">
+			<h1 class="headline">Contact
+			</h1>
 			<br>
 
 		</div>
 	</header>
 	<main>
-
-		<div class="centered">
-
-			<table>
-				<tbody>
-					<tr>
-
-						<td><br><img src="instagram.png" alt="Bild1" /></td>
-						<td><br><img src="snapchat.png" alt="Bild2" /></td>
-						<td><br><img src="whatsapp.png" alt="Bild3" /></td>
-						<td><br><img src="facebook.png" alt="Bild4" /></td>
-					</tr>
-					<tr>
-
-						<td>@Hannah__9898</td>
-						<td>@hannah199877</td>
-						<td>015209432991</td>
-						<td>@Hannah Schmitt</td>
-					</tr>
-				</tbody>
-			</table>
-			<br>
-			<br>
-			Hier können Sie auch etwas reinschreiben, es kommt jedoch nie etwas an.
-			<br>
-			<input type="text" name="spind" value=""><br>
-			<br>
-			<br>
-			<video controls loop height="400" width="720">
-				<source src="Computer.mp4" type="video/mp4">
-				Your browser does not support the video tag.
-			</video>
-			<br>
-			<br>Ich Denke jetzt wisst Ihr wo Ihr mich erreichen könnt
-			<br>
-			<br>
-			<br>
-			<br>
-			<br>
-			<br>
-			<br>
-			<br>
-			<br>
-			<br>
-			<br>
-
-		</div>
+		<br>
+		<br>
+		<nav>
+			<a href="https://www.instagram.com"><img src="instagram.png" alt="Bild1" class="icons" /> </a>
+			<a href="https://www.snapchat.com/l/de-de/"><img src="snapchat.png" alt="Bild2" class="icons" /></a>
+			<a href="https://www.whatsapp.com"><img src="whatsapp.png" alt="Bild3" class="icons" /></a>
+			<a href="https://de-de.facebook.com"><img src="facebook.png" alt="Bild4" class="icons" /></a>
+		</nav>
+		<h1>Schicke mir eine Nachricht</h1>
+		<form>
+			<input name="name" type="text" class="feedback-input" placeholder="Vorname" />
+			<input name="name" type="text" class="feedback-input" placeholder="Nachname" />
+			<input name="email" type="text" class="feedback-input" placeholder="Email" />
+			<textarea name="text" class="feedback-input" placeholder="Nachricht/Fragen"></textarea>
+			<input type="submit" value="Senden" />
+		</form>
+	
 	</main>
 	<footer>
 
-		<div class="centered">
 			<nav>
 				<h2>
 					Carpe
@@ -98,11 +55,8 @@
 					Diem
 				</h2>
 			</nav>
-		</div>
 		<nav>
-			<p style="text-align:right;">
-				Hannah Schmitt &#169; 2020
-			</p>
+			<p>Hannah Schmitt &#169; 2020</p>	
 		</nav>
 
 	</footer>
