@@ -37,6 +37,15 @@ font-weight: 800px;
     opacity: 1;
 }
 
+.mail{
+    height: 30px;
+    opacity: 0.4;
+}
+
+.mail:hover{
+    opacity: 1;
+}
+
 .headline {
     text-align: center;
     color: white;
