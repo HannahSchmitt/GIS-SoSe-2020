@@ -117,7 +117,7 @@ body{
 
     .menue1{
         width: 40%;
-        height: 0px;
+        height: 70px;
         text-align: right;
     }
     .menue1 a{
@@ -130,7 +130,7 @@ body{
     }
     .menue2{
         width: 40%;
-        height: 0px;
+        height: 70px;
     }
     .menue2 a{
         position: relative;
@@ -164,7 +164,7 @@ body{
 @media screen and (max-width: 1024px){
     .menue1{
         width: 40%;
-        height: 0px;
+        height: 200px;
         text-align: right;
     }
     .menue1 a{
@@ -177,7 +177,7 @@ body{
     }
     .menue2{
         width: 40%;
-        height: 0px;
+        height: 200px;
     }
     .menue2 a{
         position: relative;
