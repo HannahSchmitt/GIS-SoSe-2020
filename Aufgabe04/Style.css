@@ -175,8 +175,6 @@ a {
         transition-duration: 0.4s;
     }
     
-    
-    
     p{
         font-size: 10px;
     }
@@ -222,7 +220,6 @@ a {
     #freddie{
         width: 1000px;
     }
-    
     
     .weinflaschen{
         display: inline-block;
@@ -274,7 +271,6 @@ a {
         width: auto;
         height: auto;
     }
- 
     
     .weinflaschen{
         display: inline-block;
