@@ -104,13 +104,13 @@ body{
     padding: 5px 0px 00px 0px;
     margin-top: -2.5%;
     margin-bottom: 3%;
-
+ 
 }
 #rose #rotwein #weißwein{
-    margin-left: 1vw;
-    -ms-grid-columns: auto auto auto;
-    grid-template-columns: auto auto auto;
     margin-top: 0;
+    Display: inline-grid;
+    grid-template-columns: auto auto auto auto;     
+  
 }
 
 @media screen and (max-width: 600px){
