@@ -115,6 +115,11 @@ body{
 
 @media screen and (max-width: 600px){
 
+    .menue1{
+        width: 40%;
+        height: 0px;
+        text-align: right;
+    }
     .menue1 a{
         position: relative;
         color: black;
@@ -122,6 +127,10 @@ body{
         right: 75px;
         padding: 30px;
         text-decoration: none;
+    }
+    .menue2{
+        width: 40%;
+        height: 0px;
     }
     .menue2 a{
         position: relative;
@@ -134,7 +143,7 @@ body{
     header{
         position: fixed;
         width: 100%;
-        height: 1%;
+        height: 100px;
         background-color: white;
     }
     .weinbild{
@@ -153,9 +162,54 @@ body{
     }
 }
 @media screen and (max-width: 1024px){
+    .menue1{
+        width: 40%;
+        height: 0px;
+        text-align: right;
+    }
+    .menue1 a{
+        position: relative;
+        color: black;
+        top: 20%;
+        right: 75px;
+        padding: 15px;
+        text-decoration: none;
+    }
+    .menue2{
+        width: 40%;
+        height: 0px;
+    }
+    .menue2 a{
+        position: relative;
+        color: black;
+        top: 20%;
+        left: 0;
+        padding: 15px;
+        text-decoration: none;
+    }
+    header{
+        position: fixed;
+        width: 100%;
+        height: 120px;
+        background-color: white;
+    }
+    .weinbild{
+        padding-top: 52px;
+    }
+    .logo{
+        width: 40%;
+    }
+    #logo{
+        margin: 0% 10% 10% 40%;
+        width: 30%;
+    }
+    .weinflaschen{
+        display: inline-block;
+        width:auto;
+    }
 
 }
 
-@media screen and (max-width: 3000px){
+@media screen and (min-width: 1025px){
 
 }
