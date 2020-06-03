@@ -116,7 +116,7 @@ body{
 @media screen and (max-width: 600px){
 
     .menue1{
-        width: 51px;
+        width: 40px;
         height: 70px;
         text-align: right;
     }
@@ -125,11 +125,11 @@ body{
         color: black;
         top: 20%;
         right: 75px;
-        padding: -5px;
+        padding: 30px;
         text-decoration: none;
     }
     .menue2{
-        width: 46%;
+        width: 40%;
         height: 70px;
     }
     .menue2 a{
@@ -137,7 +137,6 @@ body{
         color: black;
         top: 20%;
         left: 0;
-        padding: -5px;
         text-decoration: none;
     }
     header{

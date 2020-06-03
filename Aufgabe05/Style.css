@@ -56,10 +56,10 @@ body{
     right: 5%;
 }
 
-.sectionheading {
+h2 {
     background-color:  black;
     width: 100%;
-    height: 75px;
+    height: 60px;
     color: white;
     padding-top: 30px;
 }
@@ -109,9 +109,9 @@ body{
 #rose #rotwein #weißwein{
     margin-top: 0;
     Display: inline-grid;
-    grid-template-columns: auto auto auto auto;     
-  
+    grid-template-columns: auto auto auto auto;
 }
+
 
 @media screen and (max-width: 600px){
 
@@ -150,7 +150,7 @@ body{
         padding-top: 52px;
     }
     .logo{
-        width: 40%;
+        width: 30%;
     }
     #logo{
         margin: 10% 10% 10% 40%;
