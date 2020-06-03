@@ -12,15 +12,14 @@ header{
     width: 100%;
     height: 180px;
     background-color: white;
+    margin-top: 0px;
 }
 
 body{
     padding: 0;
-    margin: 0;
-    
-}
-main{
-    color:black;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
     text-align: center;
 }
 
@@ -47,7 +46,7 @@ main{
     color: black;
     top: 60%;
     left: 0;
-    padding: 30px;
+    padding: 20px;
     text-decoration: none;
 }
 #einkaufswagen{
@@ -57,11 +56,12 @@ main{
     right: 5%;
 }
 
-.sectionheading{
+.sectionheading {
     background-color:  black;
     width: 100%;
     height: 75px;
     color: white;
+    padding-top: 30px;
 }
 .headercontent{
     display: flex;
@@ -98,40 +98,59 @@ main{
     color: white;
     padding-top: 1.5%;
 }
-#rotwein{
-    margin-top: -1,5%;
+.inhalt{
+    width: 100%;
+    display: grid;
+    padding: 5px 0px 00px 0px;
+    margin-top: -2.5%;
+    margin-bottom: 3%;
+ 
 }
-
+#rose #rotwein #weißwein{
+    margin-top: 0;
+    Display: inline-grid;
+    grid-template-columns: auto auto auto auto;     
+  
+}
 
 @media screen and (max-width: 600px){
 
+    .menue1{
+        width: 51px;
+        height: 70px;
+        text-align: right;
+    }
     .menue1 a{
         position: relative;
         color: black;
         top: 20%;
         right: 75px;
-        padding: 30px;
+        padding: -5px;
         text-decoration: none;
+    }
+    .menue2{
+        width: 46%;
+        height: 70px;
     }
     .menue2 a{
         position: relative;
         color: black;
         top: 20%;
         left: 0;
-        padding: 32px;
+        padding: -5px;
         text-decoration: none;
     }
     header{
         position: fixed;
         width: 100%;
-        height: 1%;
+        height: 100px;
         background-color: white;
     }
     .weinbild{
         padding-top: 52px;
     }
     .logo{
-        width: 40%;
+        width: 30%;
     }
     #logo{
         margin: 10% 10% 10% 40%;
@@ -143,9 +162,54 @@ main{
     }
 }
 @media screen and (max-width: 1024px){
+    .menue1{
+        width: 46%;
+        height: 200px;
+        text-align: right;
+    }
+    .menue1 a{
+        position: relative;
+        color: black;
+        top: 20%;
+        right: 75px;
+        padding: 6px;
+        text-decoration: none;
+    }
+    .menue2{
+        width: 51%;
+        height: 200px;
+    }
+    .menue2 a{
+        position: relative;
+        color: black;
+        top: 20%;
+        left: 0;
+        padding: 15px;
+        text-decoration: none;
+    }
+    header{
+        position: fixed;
+        width: 100%;
+        height: 120px;
+        background-color: white;
+    }
+    .weinbild{
+        padding-top: 52px;
+    }
+    .logo{
+        width: 30%;
+    }
+    #logo{
+        margin: 0% 10% 10% 40%;
+        width: 30%;
+    }
+    .weinflaschen{
+        display: inline-block;
+        width:auto;
+    }
 
 }
 
-@media screen and (max-width: 3000px){
+@media screen and (min-width: 1025px){
 
 }
