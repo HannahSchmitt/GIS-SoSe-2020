@@ -137,7 +137,7 @@ namespace artikel {
         let _newP: HTMLParagraphElement = document.createElement("p");
         _newP.innerHTML = artikel[_index]._beschreibung;
         // _preis hinzufügen
-        let _newPreis: HTMLHeadingElement = document.createElement("h4");
+        let _newPreis: HTMLParagraphElement = document.createElement("p");
         _newPreis.innerHTML = artikel[_index]._preis + "€";
         //Button hinzufügen
         let _newButton: HTMLButtonElement = document.createElement("button");

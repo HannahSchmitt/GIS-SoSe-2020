@@ -119,7 +119,7 @@ var artikel;
         let _newP = document.createElement("p");
         _newP.innerHTML = artikel[_index]._beschreibung;
         // _preis hinzufügen
-        let _newPreis = document.createElement("h4");
+        let _newPreis = document.createElement("p");
         _newPreis.innerHTML = artikel[_index]._preis + "€";
         //Button hinzufügen
         let _newButton = document.createElement("button");
