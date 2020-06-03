@@ -1,4 +1,3 @@
-//Rotwein-Produkte
 namespace artikel {
     interface Artikel {
         _img: string;
@@ -124,11 +123,11 @@ namespace artikel {
         //Div erzeugen
         let _newDiv: HTMLDivElement = document.createElement("div");
         _newDiv.setAttribute("class", "weinflaschen");
-        _newDiv.setAttribute("id", "rotwein-produkt" + _index);
+        _newDiv.setAttribute("id", "artikel" + _index);
         //Produktbild hinzufügen‹
         let _newImg: HTMLElement = document.createElement("img");
         _newImg.setAttribute("src", artikel[_index]._img);
-        _newImg.setAttribute("alt", "RotweinProdukte");
+        _newImg.setAttribute("alt", "artikel");
         _newImg.setAttribute("class", "produktbild");
         //Produktbezeichnung hinzufügen
         let _newH3: HTMLHeadingElement = document.createElement("h3");
@@ -148,28 +147,30 @@ namespace artikel {
 
             case "rotwein":
                 document.getElementById("rotwein")?.appendChild(_newDiv);
-                document.getElementById("rotwein" + _index)?.appendChild(_newImg);
-                document.getElementById("rotwein" + _index)?.appendChild(_newH3);
-                document.getElementById("rotwein" + _index)?.appendChild(_newP);
-                document.getElementById("rotwein" + _index)?.appendChild(_newPreis);
-                document.getElementById("rotwein" + _index)?.appendChild(_newButton);
+                document.getElementById("artikel" + _index)?.appendChild(_newImg);
+                document.getElementById("artikel" + _index)?.appendChild(_newH3);
+                document.getElementById("artikel" + _index)?.appendChild(_newP);
+                document.getElementById("artikel" + _index)?.appendChild(_newPreis);
+                document.getElementById("artikel" + _index)?.appendChild(_newButton);
                 break;
 
             case "weißwein":
                 document.getElementById("weißwein")?.appendChild(_newDiv);
-                document.getElementById("weißwein" + _index)?.appendChild(_newImg);
-                document.getElementById("weißwein" + _index)?.appendChild(_newH3);
-                document.getElementById("weißwein" + _index)?.appendChild(_newP);
-                document.getElementById("weißwein" + _index)?.appendChild(_newPreis);
-                document.getElementById("weißwein" + _index)?.appendChild(_newButton);
+                document.getElementById("artikel" + _index)?.appendChild(_newImg);
+                document.getElementById("artikel" + _index)?.appendChild(_newH3);
+                document.getElementById("artikel" + _index)?.appendChild(_newP);
+                document.getElementById("artikel" + _index)?.appendChild(_newPreis);
+                document.getElementById("artikel" + _index)?.appendChild(_newButton);
+                break;
 
             case "rose":
                 document.getElementById("rose")?.appendChild(_newDiv);
-                document.getElementById("rose" + _index)?.appendChild(_newImg);
-                document.getElementById("rose" + _index)?.appendChild(_newH3);
-                document.getElementById("rose" + _index)?.appendChild(_newP);
-                document.getElementById("rose" + _index)?.appendChild(_newPreis);
-                document.getElementById("rose" + _index)?.appendChild(_newButton);
+                document.getElementById("artikel" + _index)?.appendChild(_newImg);
+                document.getElementById("artikel" + _index)?.appendChild(_newH3);
+                document.getElementById("artikel" + _index)?.appendChild(_newP);
+                document.getElementById("artikel" + _index)?.appendChild(_newPreis);
+                document.getElementById("artikel" + _index)?.appendChild(_newButton);
+                break;
         }
     }
 }
