@@ -1,6 +1,6 @@
 footer {
     color: white;
-    background-color: black;
+    background-color: rgb(112, 100, 100);
     margin: 0;
     width: 100%;
     height: 75px;
@@ -56,11 +56,9 @@ body{
     right: 5%;
 }
 
-h2 {
-    background-color:  black;
-    width: 100%;
+h1 {
     height: 60px;
-    color: white;
+    color: rgb(112, 100, 100);
     padding-top: 30px;
 }
 .headercontent{
@@ -90,7 +88,15 @@ h2 {
     width: 100%;
     height: auto;
 }
-.weinflaschen{
+.weißweinflaschen{
+    display: inline-block;
+    width:25%;
+}
+.rotweinflaschen{
+    display: inline-block;
+    width:25%;
+}
+.roseweinflaschen{
     display: inline-block;
     width:25%;
 }
@@ -98,7 +104,21 @@ h2 {
     color: white;
     padding-top: 1.5%;
 }
-.inhalt{
+.inhaltWeiß{
+    width: 100%;
+    display: grid;
+    padding: 5px 0px 00px 0px;
+    margin-top: -2.5%;
+    margin-bottom: 3%;
+}
+.inhaltRot{
+    width: 100%;
+    display: grid;
+    padding: 5px 0px 00px 0px;
+    margin-top: -2.5%;
+    margin-bottom: 3%;
+}
+.inhaltRose{
     width: 100%;
     display: grid;
     padding: 5px 0px 00px 0px;
@@ -111,7 +131,21 @@ h2 {
     grid-template-columns: auto auto auto auto;
 }
 
-
+#anzeigeArtikel{
+    position: absolute;
+    width: 2%;
+    top: 0;
+    right: 7%;
+    background-color: rgb(90, 6, 6);
+    border: none;
+    border-radius: 50%;
+    color: white;
+    padding: 5px 5px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+}
 @media screen and (max-width: 600px){
 
     .menue1{
