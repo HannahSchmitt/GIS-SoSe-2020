@@ -134,13 +134,8 @@ h1 {
 #anzeigeArtikel{
     position: absolute;
     width: 2%;
-    top: 0;
-    right: 7%;
-    background-color: rgb(90, 6, 6);
-    border: none;
-    border-radius: 50%;
-    color: white;
-    padding: 5px 5px;
+    top: 10%;
+    right: 5%;
     text-align: center;
     text-decoration: none;
     display: inline-block;

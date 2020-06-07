@@ -6,49 +6,49 @@ var artikel;
         _img: "HexSpateburgunder.jpg",
         _name: "2018 Spätburgunder - Hexenflasche",
         _beschreibung: "Für einen Abend zu zweit",
-        _preis: 7.90,
+        _preis: 7.99,
         _kategorie: "rotwein"
     };
     let steak = {
         _img: "SteakAG.jpg",
         _name: "Steak trifft Wein Alde Gott",
         _beschreibung: "Geil zu einem blutigen Steak",
-        _preis: 5.70,
+        _preis: 5.79,
         _kategorie: "rotwein"
     };
     let agSpaetburgunder = {
         _img: "SpaetburgunderAG.jpg",
         _name: "Spätburgunder Alde Gott",
         _beschreibung: "Für gemeinsame Stunden",
-        _preis: 7.90,
-        _kategorie: "rotwein"
+        _preis: 7.99,
+        _kategorie: "weißwein"
     };
     let agQuali = {
         _img: "SpaetburgunderQualiAG.jpg",
         _name: "Spätburgunder Qualitätswein Alde Gott",
         _beschreibung: "Für schöne Sonnenuntergänge",
-        _preis: 6.60,
+        _preis: 6.65,
         _kategorie: "rotwein"
     };
     let obSpaetburgunder = {
         _img: "spateburgunderOK.jpg",
         _name: "Spätburgunder Oberkircher Winzer",
         _beschreibung: "Für schöne Soonnenuntergänge",
-        _preis: 5.90,
+        _preis: 5.95,
         _kategorie: "rotwein"
     };
     let smsOk = {
         _img: "SMSOK.jpg",
         _name: "SMS- Rotwein QbA lieblich",
         _beschreibung: "Lieblicher Rotwein - Gute Wahl",
-        _preis: 8.00,
+        _preis: 8.07,
         _kategorie: "rotwein"
     };
     let cuveeok = {
         _img: "cuveeok.jpg",
         _name: "Cuvée Royal 2015",
         _beschreibung: "Verzaubern Sie Ihre Frau mit einem edlen Tropfen",
-        _preis: 34.90,
+        _preis: 34.99,
         _kategorie: "rotwein"
     };
     //Weißwein Artikel
@@ -56,42 +56,42 @@ var artikel;
         _img: "SpaetburgunderWeissherbstAG.jpg",
         _name: "Spätburgunder Weißherbst Trocken Alde Gott",
         _beschreibung: "Für tolle Sommerabende",
-        _preis: 9.50,
-        _kategorie: "weißwein"
+        _preis: 9.58,
+        _kategorie: "rose"
     };
     let grauburgunderHex = {
         _img: "Grauburgunder.jpg",
         _name: "Grauburgunder Hex vom Dasenstein",
         _beschreibung: "Für schöne Sonnenuntergänge",
-        _preis: 5.70,
+        _preis: 5.79,
         _kategorie: "weißwein"
     };
     let rivanerHex = {
         _img: "MuellerThurgau.jpg",
         _name: "Rivaner Hex vom Dasenstein",
         _beschreibung: "Perfekt zu einem leichten Sommeressen",
-        _preis: 9.90,
+        _preis: 9.99,
         _kategorie: "weißwein"
     };
     let muellerAg = {
         _img: "MuellerThurgauAG.jpg",
         _name: "Müller Thurgau Alde Gott",
         _beschreibung: "Für schöne Sonnenuntergänge",
-        _preis: 5.70,
+        _preis: 5.79,
         _kategorie: "weißwein"
     };
     let rieslingAg = {
         _img: "RieslingAG.jpg",
         _name: "Riesling Alde Gott",
         _beschreibung: "Für ein romantisches Picknick",
-        _preis: 6.70,
+        _preis: 6.78,
         _kategorie: "weißwein"
     };
     let rulaenderhex = {
         _img: "Rulaender.jpg",
         _name: "Ruländer Spätlese Hex vom Dasenstein",
         _beschreibung: "Einen Wein in den Weinbergen?",
-        _preis: 9.50,
+        _preis: 9.57,
         _kategorie: "weißwein"
     };
     //Rose Artikel
@@ -99,7 +99,7 @@ var artikel;
         _img: "Rose.jpg",
         _name: "Rosé Qualitätswein",
         _beschreibung: "Für schöne Sonnenuntergänge",
-        _preis: 7.80,
+        _preis: 7.81,
         _kategorie: "rose"
     };
     //Alle Artikel aus dem Shop
@@ -232,37 +232,37 @@ var artikel;
                 rose();
                 break;
         }
-        function rotwein() {
-            document.getElementById("rotwein").style.display = "block";
-            document.getElementById("weißwein").style.display = "none";
-            document.getElementById("rose").style.display = "none";
-            document.getElementById("rotweinbtn").style.color = "grey";
-            document.getElementById("weißweinbtn").style.color = "black";
-            document.getElementById("rosebtn").style.color = "black";
-        }
-        function weißwein() {
-            document.getElementById("weißwein").style.display = "block";
-            document.getElementById("rotwein").style.display = "none";
-            document.getElementById("rose").style.display = "none";
-            document.getElementById("weißweinbtn").style.color = "grey";
-            document.getElementById("rotweinbtn").style.color = "black";
-            document.getElementById("rosebtn").style.color = "black";
-        }
-        function rose() {
-            document.getElementById("rose").style.display = "block";
-            document.getElementById("rotwein").style.display = "none";
-            document.getElementById("weißwein").style.display = "none";
-            document.getElementById("rosebtn").style.color = "grey";
-            document.getElementById("rotweinbtn").style.color = "black";
-            document.getElementById("weißweinbtn").style.color = "black";
-        }
+    }
+    function rotwein() {
+        document.getElementById("rotwein").style.display = "block";
+        document.getElementById("weißwein").style.display = "none";
+        document.getElementById("rose").style.display = "none";
+        document.getElementById("rotweinbtn").style.color = "grey";
+        document.getElementById("weißweinbtn").style.color = "black";
+        document.getElementById("rosebtn").style.color = "black";
+    }
+    function weißwein() {
+        document.getElementById("weißwein").style.display = "block";
+        document.getElementById("rotwein").style.display = "none";
+        document.getElementById("rose").style.display = "none";
+        document.getElementById("weißweinbtn").style.color = "grey";
+        document.getElementById("rotweinbtn").style.color = "black";
+        document.getElementById("rosebtn").style.color = "black";
+    }
+    function rose() {
+        document.getElementById("rose").style.display = "block";
+        document.getElementById("rotwein").style.display = "none";
+        document.getElementById("weißwein").style.display = "none";
+        document.getElementById("rosebtn").style.color = "grey";
+        document.getElementById("rotweinbtn").style.color = "black";
+        document.getElementById("weißweinbtn").style.color = "black";
     }
     //Neue Variable erstellen, Verlinkung zum Button 
-    let rotweinButton = document.querySelector("#rotweinbtn");
+    let rotweinButton = document.getElementById("rotweinbtn");
     rotweinButton.addEventListener("click", handleCategoryClick.bind(rotweinButton));
-    let weißweinButton = document.querySelector("#weißweinbtn");
+    let weißweinButton = document.getElementById("weißweinbtn");
     weißweinButton.addEventListener("click", handleCategoryClick.bind(weißweinButton));
-    let roseButton = document.querySelector("#rosebtn");
+    let roseButton = document.getElementById("rosebtn");
     roseButton.addEventListener("click", handleCategoryClick.bind(roseButton));
 })(artikel || (artikel = {}));
 //# sourceMappingURL=Script.js.map
