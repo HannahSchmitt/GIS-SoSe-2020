@@ -115,7 +115,7 @@ h1 {
     width:25%;
 }
 .verfasser{
-    color: white;
+    color: black;
     padding-top: 1.5%;
 }
 .inhaltWeiß{
@@ -187,7 +187,7 @@ h1 {
         position: fixed;
         width: 100%;
         height: 100px;
-        background-color: white;
+        background-color: rgb(179, 161, 139);
     }
     .weinbild{
         padding-top: 52px;
@@ -234,7 +234,7 @@ h1 {
         position: fixed;
         width: 100%;
         height: 120px;
-        background-color: white;
+        background-color: rgb(179, 161, 139);
     }
     .weinbild{
         padding-top: 52px;

@@ -1,77 +1,66 @@
 "use strict";
 var artikel;
 (function (artikel) {
-    function getLocalStorage() {
-        for (let key in localStorage) {
-            console.log(localStorage.getItem(key));
-            let item = JSON.parse(localStorage.getItem(key));
-            console.log(item._name);
-        }
-    }
-    document.addEventListener("DOMContentLoaded", getLocalStorage);
-    function createDynamicContent() {
-        for (let i = 0; i <= countTo - 1; i++) {
-            //Div erstellen
-            let newDiv = document.createElement("div");
-            document.getElementsByClassName("warenliste").appendChild(newDiv);
-            newDiv.id = "divId" + i;
-            console.log("divId" + i);
-            //IMG IN DIV PACKEN
-            let imgElement = document.createElement("img");
-            imgElement.src = localStorage.getItem("item-image" + i);
-            newDiv.appendChild(imgElement);
-            console.log(imgElement);
-            //NAME
-            let name = document.createElement("p");
-            name.innerHTML = localStorage.getItem("item-name" + i);
-            newDiv.appendChild(name);
-            //PREIS
-            let price = document.createElement("p");
-            price.innerHTML = localStorage.getItem("item-price" + i);
-            newDiv.setAttribute("preis", price.innerHTML);
-            newDiv.appendChild(price);
-            //BUTTON
-            let kaufen = document.createElement("button");
-            kaufen.innerHTML = "Löschen";
-            newDiv.appendChild(kaufen);
-            kaufen.addEventListener("click", handleRemoveArticle);
-            //Gesamtpreis berechnen
-            total = total + parseFloat(price.innerHTML);
-            pTotal.innerHTML = total.toFixed(2) + "€";
-            setGesamtpreis();
-        }
-        function handleRemoveArticle(_event) {
-            //Gesampreis reduzieren
-            let preisString = _event.currentTarget.parentElement.getAttribute("preis");
-            gesamtpreis = gesamtpreis - parseFloat(preisString);
-            pGesamtpreis.innerHTML = gesamtpreis.toFixed(2) + "€";
-            setGesamtpreis();
-            //Artikel Löschen
-            (_event.currentTarget.parentElement).remove();
-        }
-        removeAll();
-    }
-    //Gesamtpreis in Header plazieren
-    function setGesamtpreis() {
+    window.addEventListener("load", init);
+    let contentDiv;
+    let pGesamtpreis;
+    let gesamtPreis;
+    function init(_event) {
+        contentDiv = document.querySelector(".warenliste");
+        pGesamtpreis = document.querySelector("#total");
+        pGesamtpreis.addEventListener("click", handleRemoveAll);
         document.getElementById("warenkorbWert")?.appendChild(pGesamtpreis);
+        console.log(localStorage);
+        update();
     }
-    function removeAll() {
-        let remButton = document.getElementById("liRemoveAll");
-        remButton.addEventListener("click", handleRemoveAll);
+    function update() {
+        contentDiv.innerHTML = "";
+        gesamtPreis = 0;
+        for (let index = 0; index < localStorage.length; index++) {
+            let key = localStorage.key(index);
+            let articleJson = localStorage.getItem(key);
+            let item = JSON.parse(articleJson);
+            gesamtPreis += item.preis;
+            createDynamicContent(item);
+        }
+        setGesamtpreis();
+    }
+    function createDynamicContent(_inputArticle) {
+        //Div erstellen
+        let newDiv = document.createElement("div");
+        contentDiv.appendChild(newDiv);
+        newDiv.id = _inputArticle.name;
+        console.log(newDiv.id);
+        //IMG IN DIV PACKEN
+        let imgElement = document.createElement("img");
+        imgElement.src = _inputArticle.img;
+        newDiv.appendChild(imgElement);
+        console.log(imgElement);
+        //NAME
+        let name = document.createElement("p");
+        name.innerHTML = _inputArticle.name;
+        newDiv.appendChild(name);
+        //PREIS
+        let price = document.createElement("p");
+        price.innerHTML = "" + _inputArticle.preis;
+        newDiv.setAttribute("preis", price.innerHTML);
+        newDiv.appendChild(price);
+        //BUTTON
+        let kaufen = document.createElement("button");
+        kaufen.innerHTML = "Löschen";
+        newDiv.appendChild(kaufen);
+        kaufen.addEventListener("click", handleRemoveArticle.bind(_inputArticle));
+    }
+    function handleRemoveArticle(_event) {
+        localStorage.removeItem(this.name);
+        update();
+    }
+    function setGesamtpreis() {
+        pGesamtpreis.innerHTML = "" + gesamtPreis;
     }
     function handleRemoveAll(_event) {
-        for (let i = 0; i <= countTo - 1; i++) {
-            try {
-                document.getElementById("divId" + i).remove();
-            }
-            catch (error) {
-                console.log(error);
-                console.log("Artikel wurde zuvor von Hand gelöscht und kann nicht mehr gefunden werden");
-            }
-            pGesamtpreis.innerHTML = 0 + "€";
-            setGesamtpreis();
-            localStorage.clear();
-        }
+        localStorage.clear();
+        update();
     }
 })(artikel || (artikel = {}));
 //# sourceMappingURL=ScriptWarenkorb.js.map
