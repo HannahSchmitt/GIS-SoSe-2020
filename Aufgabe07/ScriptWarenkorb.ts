@@ -68,9 +68,8 @@ namespace artikel {
     }
 
     function setGesamtpreis(): void {
-        pGesamtpreis.innerHTML = "" + gesamtPreis;
+        pGesamtpreis.innerHTML = "" + gesamtPreis.toFixed(2);
     }
-
 
     function handleRemoveAll(_event: Event): void {
        localStorage.clear();

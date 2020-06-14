@@ -46,6 +46,10 @@ body{
     padding: 30px;
     text-decoration: none;
 }
+h2{
+    position: absolute;
+    width: 20%;
+}
 #einkaufswagen{
     position: absolute;
     width: 67%;
@@ -93,7 +97,7 @@ h1 {
 }
 .logoname{
     width:33%;
-    color: black;
+    color: rgb(129, 123, 123);
 }
 .weinbild{
     padding-top: 180px;
@@ -144,6 +148,22 @@ h1 {
     Display: inline-grid;
     grid-template-columns: auto auto auto auto;
 }
+.warenliste{
+    margin-top: 0;
+    Display: inline-grid;
+    grid-template-columns: auto auto auto;
+    width: 100%;
+    padding: 5px 0px 00px 0px;
+    margin-top: 4.5%;
+    margin-bottom: 5%;
+    position: center;
+}
+#total{
+    position: absolute;
+    color: rgb(110, 72, 72);
+    top: 55%;
+    right: 7%;
+}
 
 #anzeigeArtikel{
     position: absolute;
@@ -155,6 +175,14 @@ h1 {
     display: inline-block;
     font-size: 21px;
     background-color: rgb(161, 139, 112);
+}
+#gesamtLoeschen{
+    position: absolute;
+    width: 14%;
+    top: 68%;
+    right: 1%;
+    background-color: rgb(161, 139, 112);
+    border-radius: 20px 20px 20px 20px;
 }
 @media screen and (max-width: 600px){
 

@@ -56,7 +56,7 @@ var artikel;
         update();
     }
     function setGesamtpreis() {
-        pGesamtpreis.innerHTML = "" + gesamtPreis;
+        pGesamtpreis.innerHTML = "" + gesamtPreis.toFixed(2);
     }
     function handleRemoveAll(_event) {
         localStorage.clear();
