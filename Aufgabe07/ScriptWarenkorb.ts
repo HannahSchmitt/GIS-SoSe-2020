@@ -5,11 +5,13 @@ namespace artikel {
     let contentDiv: HTMLDivElement;
     let pGesamtpreis: HTMLParagraphElement;
     let gesamtPreis: number;
+    let warenkorbLoeschen: HTMLParagraphElement;
 
     function init(_event: Event): void {
         contentDiv = <HTMLDivElement>document.querySelector(".warenliste");
         pGesamtpreis = <HTMLParagraphElement>document.querySelector("#total");
-        pGesamtpreis.addEventListener("click", handleRemoveAll);
+        warenkorbLoeschen = <HTMLParagraphElement>document.querySelector("#gesamtLoeschen");
+        warenkorbLoeschen.addEventListener("click", handleRemoveAll);
         document.getElementById("warenkorbWert")?.appendChild(pGesamtpreis);
 
         console.log(localStorage);
