@@ -5,10 +5,12 @@ var artikel;
     let contentDiv;
     let pGesamtpreis;
     let gesamtPreis;
+    let warenkorbLoeschen;
     function init(_event) {
         contentDiv = document.querySelector(".warenliste");
         pGesamtpreis = document.querySelector("#total");
-        pGesamtpreis.addEventListener("click", handleRemoveAll);
+        warenkorbLoeschen = document.querySelector("#gesamtLoeschen");
+        warenkorbLoeschen.addEventListener("click", handleRemoveAll);
         document.getElementById("warenkorbWert")?.appendChild(pGesamtpreis);
         console.log(localStorage);
         update();
@@ -56,7 +58,7 @@ var artikel;
         update();
     }
     function setGesamtpreis() {
-        pGesamtpreis.innerHTML = "" + gesamtPreis.toFixed(2);
+        pGesamtpreis.innerHTML = "" + gesamtPreis.toFixed(2) + " € ";
     }
     function handleRemoveAll(_event) {
         localStorage.clear();

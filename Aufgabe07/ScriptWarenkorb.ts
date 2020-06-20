@@ -70,7 +70,7 @@ namespace artikel {
     }
 
     function setGesamtpreis(): void {
-        pGesamtpreis.innerHTML = "" + gesamtPreis.toFixed(2);
+        pGesamtpreis.innerHTML = "" + gesamtPreis.toFixed(2) + " € ";
     }
 
     function handleRemoveAll(_event: Event): void {

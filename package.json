@@ -1,0 +1,21 @@
+{
+  "name": "aufgabe8gis",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {},
+  "scripts": {
+    "start": "node Aufgabe08/Main.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HannahSchmitt/GIS-SoSe-2020.git"
+  },
+  "author": "Hannah Schmitt",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/HannahSchmitt/GIS-SoSe-2020/issues"
+  },
+  "homepage": "https://github.com/HannahSchmitt/GIS-SoSe-2020#readme"
+}
