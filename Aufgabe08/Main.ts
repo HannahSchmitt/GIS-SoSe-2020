@@ -27,6 +27,8 @@ export namespace A08Server {
 
     _response.write(_request.url); //Daten/Url werden auf der Serverwebseite angezeigt
 
+    console.log(_request.url); //Teilaufgabe, die request.url wird in der Serverkonsole ausgegeben
+
     _response.end(); //Beendet die Rückgabe und soll die Nachricht als komplett verstehen
      //Diese Methode signalisiert dem Server, dass alle Antwortkopfzeilen und -körper gesendet wurden;
     //dieser Server sollte diese Nachricht als vollständig betrachten. Die Methode, response.end(), MUSS bei jeder Antwort aufgerufen werden!
