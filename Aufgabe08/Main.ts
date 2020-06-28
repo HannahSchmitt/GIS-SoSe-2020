@@ -1,8 +1,9 @@
 //Um einen Server zu bauen, benötigt man das Modul http
 //Der Asterisk * gibt an, dass sämtliche Funktionalitäten importiert werden sollen.
 import * as Http from "http";
+//import * as Url from "url";
 
-//
+
 export namespace A08Server {
   console.log("Starting server"); //Server wird gestartet und in der Konsole ausgegeben
   let port: number = Number(process.env.PORT); //Port erstellen
