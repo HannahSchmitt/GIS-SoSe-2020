@@ -14,7 +14,7 @@ export namespace A11 {
     if (port == undefined)
         port = 8100;
 
-    let databaseUrl: string = "mongodb+srv://Administrator:<password>@hannahnaha.dtfe1.mongodb.net/<dbname>?retryWrites=true&w=majority";
+    let databaseUrl: string = "mongodb+srv://Administrator:Administrator@hannahnaha.dtfe1.mongodb.net/Test?retryWrites=true&w=majority";
 
     startServer(port);
     connectToDatabase(databaseUrl);
