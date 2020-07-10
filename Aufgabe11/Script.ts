@@ -9,7 +9,7 @@ namespace A11 {
 
     async function sendButtonHandler(): Promise<void> {
         formData = new FormData(document.forms[0]);
-        let url: string = "http://localhost:8100/send";
+        let url: string = "https://aufgabe8gis.herokuapp.com/send";
         let query: URLSearchParams = new URLSearchParams(<any>formData);
         url = url + "?" + query.toString();
         await fetch(url);
@@ -17,7 +17,7 @@ namespace A11 {
 
     async function getButtonHandler(): Promise<void> {
         //formData = new FormData(document.forms[0]);
-        let url: string = "http://localhost:8100/get";
+        let url: string = "https://aufgabe8gis.herokuapp.com/get";
         let response: Response = await fetch(url);
         let resp2: string = await response.text();
         (<HTMLDivElement>document.getElementById("output")).innerHTML = resp2;
