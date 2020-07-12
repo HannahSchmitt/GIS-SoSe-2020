@@ -8,14 +8,14 @@ var A11;
     getButton.addEventListener("click", getButtonHandler);
     async function sendButtonHandler() {
         formData = new FormData(document.forms[0]);
-        let url = "http://localhost:8100/send";
+        let url = "https://aufgabe8gis.herokuapp.com/send";
         let query = new URLSearchParams(formData);
         url = url + "?" + query.toString();
         await fetch(url);
     }
     async function getButtonHandler() {
         //formData = new FormData(document.forms[0]);
-        let url = "http://localhost:8100/get";
+        let url = "https://aufgabe8gis.herokuapp.com/get";
         let response = await fetch(url);
         let resp2 = await response.text();
         document.getElementById("output").innerHTML = resp2;

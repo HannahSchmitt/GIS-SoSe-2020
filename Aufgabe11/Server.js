@@ -12,7 +12,7 @@ var A11;
     //Wenn keinen Port -> dann wird er auf 8100 gesetzt
     if (port == undefined)
         port = 8100;
-    let databaseUrl = "mongodb://localhost:27019";
+    let databaseUrl = "mongodb+srv://Administrator:Administrator@hannahnaha.dtfe1.mongodb.net/Test?retryWrites=true&w=majority";
     startServer(port);
     connectToDatabase(databaseUrl);
     function startServer(_port) {
