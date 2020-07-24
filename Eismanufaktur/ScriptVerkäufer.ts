@@ -1,6 +1,6 @@
 namespace Eismanufaktur {
 
-    let contentDiv: HTMLDivElement;
+    //let contentDiv: HTMLDivElement;
     let pGesamtpreis: HTMLParagraphElement;
     let gesamtPreis: number;
 
@@ -8,12 +8,12 @@ namespace Eismanufaktur {
     //buttonHtml.addEventListener("click", handleClickHtml);
 
     window.addEventListener("load", init);
-    
+
     function init(_event: Event): void {
-        contentDiv = <HTMLDivElement>document.querySelector(".warenliste");
+        //contentDiv = <HTMLDivElement>document.querySelector(".warenliste");
         pGesamtpreis = <HTMLParagraphElement>document.querySelector("#total");
         document.getElementById("warenkorbWert")?.appendChild(pGesamtpreis);
-        
+
         createButtons();
         console.log(localStorage);
         setGesamtpreis();
@@ -23,6 +23,9 @@ namespace Eismanufaktur {
         let getData: HTMLButtonElement = <HTMLButtonElement>document.getElementById("get");
         getData.addEventListener("click", getButtonfunction);
         //let url: string = "Data.json";
+        //delete all button
+        let deleteData: HTMLButtonElement = <HTMLButtonElement>document.getElementById("delete");
+        deleteData.addEventListener("click", deleteDatafunction);
     }
 
     function setGesamtpreis(): void {
@@ -42,5 +45,21 @@ namespace Eismanufaktur {
         let response2: string = await response.text();
         (<HTMLDivElement>document.getElementById("serverResponse")).innerHTML = response2;
         console.log("response");
-        }
     }
+    async function deleteDatafunction(_click: MouseEvent): Promise <void> { 
+        //let url: string = "http://localhost:8100";
+        let url: string = "https://aufgabe8gis.herokuapp.com/gesamtLoeschen";
+        let formData: FormData = new FormData(document.forms[0]);
+        
+        // tslint:disable-next-line: no-any
+        let query: URLSearchParams = new URLSearchParams(<any>formData);
+        
+        
+        url += "?" + query.toString();
+        //console.log(url);
+        
+        let response: Response = await fetch(url);
+        console.log(response);
+        //text.innerHTML = "Daten wurden gelöscht";
+        }
+}

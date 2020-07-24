@@ -13,8 +13,8 @@ var Eismanufaktur;
     //Wenn keinen Port -> dann wird er auf 8100 gesetzt
     if (port == undefined)
         port = 8100;
-    let databaseUrl = "mongodb://localhost:27020";
-    //let databaseUrl: string = "mongodb+srv://Administrator:Administrator@hannahnaha.dtfe1.mongodb.net/Test?retryWrites=true&w=majority";
+    //let databaseUrl: string = "mongodb://localhost:27020";
+    let databaseUrl = "mongodb+srv://Administrator:Administrator@hannahnaha.dtfe1.mongodb.net/Test?retryWrites=true&w=majority";
     startServer(port);
     connectToDatabase(databaseUrl);
     function startServer(_port) {
@@ -49,6 +49,9 @@ var Eismanufaktur;
         if (_request.url) {
             let url = Url.parse(_request.url, true);
             let path = url.pathname;
+            if (path == "/deleteData") {
+                kontaktliste.drop();
+            }
             if (path == "/send") {
                 console.log("Übermittle die Daten an Mongo");
                 console.log(url.query);

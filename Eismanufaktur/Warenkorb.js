@@ -37,8 +37,8 @@ var Eismanufaktur;
     async function sendButtonfunction() {
         console.log("Hallöle");
         formData = new FormData(document.forms[0]);
-        let url = "http://localhost:8100/send";
-        //let url: string = "https://aufgabe8gis.herokuapp.com/send";
+        //let url: string = "http://localhost:8100/send";
+        let url = "https://aufgabe8gis.herokuapp.com/send";
         // tslint:disable-next-line: no-any
         let query = new URLSearchParams(formData);
         url = url + "?" + query.toString();

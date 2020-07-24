@@ -98,7 +98,7 @@ h4 {
 #Nuss p{
     color: white;
     position: absolute;
-    top: 400px;
+    top: -263px;
     right: 165px;
 }
 #Pistazie {
@@ -151,8 +151,8 @@ h4 {
 #Vanille p{
     color: white;
     position: absolute;
-    top: 400px;
-    right: 165px;
+    top: -290px;
+    right: 23px;
 }
 #Eiswaffel{
     position: absolute;
@@ -162,8 +162,8 @@ h4 {
 #Eiswaffel p {
     color: white;
     position: absolute;
-    top: 400px;
-    right: 165px;
+    top: -375px;
+    right: 76px;
 }
 #Orange{
     position: absolute;
@@ -172,8 +172,8 @@ h4 {
 #Orange p{
     color: white;
     position: absolute;
-    top: 400px;
-    right: 165px;
+    top: -271px;
+    right: 103px;
 }
 #Becher {
     position: absolute;
@@ -183,8 +183,8 @@ h4 {
 #Becher p{
     color: white;
     position: absolute;
-    top: 400px;
-    right: 165px;
+    top: -362px;
+    right: 19px;
 }
 #gesamtLoeschen{
     position: absolute;

@@ -57,6 +57,9 @@ export namespace Eismanufaktur {
         if (_request.url) {
             let url: Url.UrlWithParsedQuery = Url.parse(_request.url, true);
             let path: string = <string>url.pathname;
+            if (path == "/deleteData") {
+                kontaktliste.drop();
+                }
             if (path == "/send") {
                 console.log("Übermittle die Daten an Mongo");
                 console.log(url.query);
@@ -66,9 +69,11 @@ export namespace Eismanufaktur {
                 await receivedDatas(_response);
             }
         }
+
         //response abschließen
         _response.end();
     }
+
     async function receivedDatas(_response: Http.ServerResponse): Promise<void> {
         console.log("Test456");
         //tslint:disable-next-line: no-any
