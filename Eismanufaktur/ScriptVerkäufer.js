@@ -1,30 +1,18 @@
 "use strict";
 var Eismanufaktur;
 (function (Eismanufaktur) {
-    //let contentDiv: HTMLDivElement;
-    let pGesamtpreis;
-    let gesamtPreis;
     //let buttonHtml: HTMLButtonElement = <HTMLButtonElement>document.getElementById("buttonHtml");
     //buttonHtml.addEventListener("click", handleClickHtml);
     window.addEventListener("load", init);
     function init(_event) {
-        //contentDiv = <HTMLDivElement>document.querySelector(".warenliste");
-        pGesamtpreis = document.querySelector("#total");
-        document.getElementById("warenkorbWert")?.appendChild(pGesamtpreis);
         createButtons();
-        console.log(localStorage);
-        setGesamtpreis();
     }
     function createButtons() {
         let getData = document.getElementById("get");
         getData.addEventListener("click", getButtonfunction);
         //let url: string = "Data.json";
         //delete all button
-        let deleteData = document.getElementById("delete");
-        deleteData.addEventListener("click", deleteDatafunction);
-    }
-    function setGesamtpreis() {
-        pGesamtpreis.innerHTML = "" + gesamtPreis.toFixed(2) + " € ";
+        document.getElementById("gesamtLoeschen")?.addEventListener("click", deleteDatafunction);
     }
     let formData = new FormData;
     async function getButtonfunction() {

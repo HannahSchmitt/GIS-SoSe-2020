@@ -1,8 +1,5 @@
 namespace Eismanufaktur {
 
-    //let contentDiv: HTMLDivElement;
-    let pGesamtpreis: HTMLParagraphElement;
-    let gesamtPreis: number;
 
     //let buttonHtml: HTMLButtonElement = <HTMLButtonElement>document.getElementById("buttonHtml");
     //buttonHtml.addEventListener("click", handleClickHtml);
@@ -10,13 +7,7 @@ namespace Eismanufaktur {
     window.addEventListener("load", init);
 
     function init(_event: Event): void {
-        //contentDiv = <HTMLDivElement>document.querySelector(".warenliste");
-        pGesamtpreis = <HTMLParagraphElement>document.querySelector("#total");
-        document.getElementById("warenkorbWert")?.appendChild(pGesamtpreis);
-
         createButtons();
-        console.log(localStorage);
-        setGesamtpreis();
     }
 
     function createButtons(): void {
@@ -24,12 +15,9 @@ namespace Eismanufaktur {
         getData.addEventListener("click", getButtonfunction);
         //let url: string = "Data.json";
         //delete all button
-        let deleteData: HTMLButtonElement = <HTMLButtonElement>document.getElementById("delete");
-        deleteData.addEventListener("click", deleteDatafunction);
-    }
+        document.getElementById("gesamtLoeschen")?.addEventListener("click", deleteDatafunction);
 
-    function setGesamtpreis(): void {
-        pGesamtpreis.innerHTML = "" + gesamtPreis.toFixed(2) + " € ";
+
     }
 
     let formData: FormData = new FormData;

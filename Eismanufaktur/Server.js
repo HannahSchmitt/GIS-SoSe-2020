@@ -49,7 +49,7 @@ var Eismanufaktur;
         if (_request.url) {
             let url = Url.parse(_request.url, true);
             let path = url.pathname;
-            if (path == "/deleteData") {
+            if (path == "/gesamtLoeschen") {
                 kontaktliste.drop();
             }
             if (path == "/send") {
