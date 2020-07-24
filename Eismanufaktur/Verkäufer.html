@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="StyleVerkäufer.css">
+    <title>Ihre Bestellungen</title>
+    <script src="ScriptVerkäufer.js" defer></script>
+
+</head>
+
+<body>
+    <header>
+        <div class="Logo">
+            <img src="Logo.jpg" id="Logo" alt="Logo">
+        </div>
+        <div class="headercontent">
+            <div class="menue2">
+                <a href="Webseite.html"> <img src="Home.png" alt="Home" id="Verkäufer"></a>
+                <div id="produktBubble"></div>
+                <p id="gesamtLoeschen">Warenkorb Löschen</p>
+            </div>            
+            <div>
+                <p id="totalVerkäufer"></p>
+            </div>
+        </div>
+
+    </header>
+
+    <main>
+        <!--<form methode="GET" action="http://localhost:8100" id="myForm">!-->   
+        <form methode="GET" action="https://aufgabe8gis.herokuapp.com" id="myForm"> 
+            <button type="button" id="get">Daten anfragen</button> 
+        </form>
+        
+        <div class="warenliste"></div>
+        <div id="serverResponse"></div>
+    </main>
+    <footer>
+        <div>
+            <p class="verfasser" id="Informationen">Hannah Schmitt</p>
+        </div>
+
+    </footer>
+</body>
+
+</html>

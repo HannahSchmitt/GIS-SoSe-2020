@@ -1,0 +1,11 @@
+[{"img":"Orange.png","name":"Orange","preis":1.11,"kategorie":"eis"},
+    {"img":"Vanille.png","name":"Vanille","preis":1.11,"kategorie":"eis"},
+    {"img":"Nuss.png","name":"Nuss","preis":1.11,"kategorie":"eis"},
+    {"img":"Pistazie.png","name":"Pistazie","preis":1.11,"kategorie":"eis"},
+
+    {"img":"eiswaffel1.png","name":"Eiswaffel","preis":0.11,"kategorie":"waffel"},
+    {"img":"eisbecher.png","name":"Becher","preis":0.21,"kategorie":"waffel"},
+
+    {"img":"schokolade.png","name":"Schokolade","preis":0.31,"kategorie":"topping"},
+    {"img":"streusel.png","name":"Schokostreusel","preis":0.51,"kategorie":"topping"},
+    {"img":"heidelbeeren.png","name":"Heidelbeeren","preis":0.21,"kategorie":"topping"}]

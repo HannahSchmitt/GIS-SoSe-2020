@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="StyleWarenkorb.css">
+    <title>Ihre Bestellungen</title>
+    <script src="Warenkorb.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <div class="Logo">
+            <img src="Logo.jpg" id="Logo" alt="Logo">
+        </div>
+        <div class="headercontent">
+            <div class="menue2">
+                <a href="Webseite.html"> <img src="Home.png" alt="Home" id="Verkäufer"></a>
+                <div id="produktBubble"></div>
+            </div>
+            <div>
+                <p id="totalVerkäufer"></p>
+            </div>
+        </div>
+
+    </header>
+
+    <main>
+        <div class="warenliste"></div>
+        <div id="countPrice"></div>
+        <div id="serverResponse"></div>
+        <div id="Formular">
+            <h3>Sende hier Deine Informationen</h3>
+            <!--<form methode="GET" action="http://localhost:8100" id="myForm">!-->
+            <form methode="GET" action="https://aufgabe8gis.herokuapp.com" id="myForm">
+            
+                <input type="text" name="firstname"> Firstname <br>
+                <input type="text" name="lastname"> Lastname <br>
+                <input type="text" name="adress"> Adresse <br>
+                <button type="button" id="send">send</button>
+            </form>
+        </div>
+    </main>
+    <footer>
+        <div>
+            <p class="verfasser" id="Informationen">Hannah Schmitt</p>
+        </div>
+
+    </footer>
+</body>
+</html>
