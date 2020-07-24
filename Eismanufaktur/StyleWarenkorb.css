@@ -269,9 +269,15 @@ body{
     display: block;
 }
 
-#Verkäufer{
+#Webseite{
     position: absolute;
     top: 25px;
+    height: 50px;
+    right: 100px;
+}
+#Admin{
+    position: absolute;
+    top: 30px;
     height: 50px;
     right: 20px;
 }
