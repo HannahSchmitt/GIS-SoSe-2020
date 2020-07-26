@@ -4,21 +4,19 @@ var Eismanufaktur;
     let contentDiv;
     let pGesamtpreis;
     let gesamtPreis;
-    let warenkorbLoeschen;
     let sendData = document.getElementById("send");
     sendData.addEventListener("click", sendButtonfunction);
     window.addEventListener("load", init);
     function init(_event) {
         contentDiv = document.querySelector(".warenliste");
         pGesamtpreis = document.querySelector("#total");
-        warenkorbLoeschen = document.querySelector("#gesamtLoeschen");
-        warenkorbLoeschen.addEventListener("click", handleRemoveAll);
         update();
         document.getElementById("warenkorbWert")?.appendChild(pGesamtpreis);
         let gesamtPreisDiv = document.getElementById("countPrice");
         let gesamtPreisText = document.createElement("p");
         gesamtPreisDiv.appendChild(gesamtPreisText).innerHTML = "gesamtPreis: " + gesamtPreis.toFixed(2) + "€";
         console.log(localStorage);
+        update();
     }
     function update() {
         contentDiv.innerHTML = "";
@@ -32,6 +30,7 @@ var Eismanufaktur;
             createDynamicContent(item);
             console.log(gesamtPreis);
         }
+        setGesamtpreis();
     }
     let formData;
     async function sendButtonfunction() {
@@ -53,35 +52,16 @@ var Eismanufaktur;
         console.log(newDiv.id);
         //IMG IN DIV PACKEN
         let imgElement = document.createElement("img");
-        imgElement.src = _inputArticle.img;
         newDiv.appendChild(imgElement);
+        imgElement.src = _inputArticle.img;
         console.log(imgElement);
         //NAME
         let name = document.createElement("p");
         name.innerHTML = _inputArticle.name;
         newDiv.appendChild(name);
-        //PREIS
-        let price = document.createElement("p");
-        price.innerHTML = "" + _inputArticle.preis;
-        newDiv.setAttribute("preis", price.innerHTML);
-        newDiv.appendChild(price);
-        //BUTTON
-        let kaufen = document.createElement("button");
-        kaufen.innerHTML = "Löschen";
-        newDiv.appendChild(kaufen);
-        kaufen.addEventListener("click", handleRemoveArticle.bind(_inputArticle));
     }
-    // tslint:disable-next-line: no-any
-    function handleRemoveArticle(_event) {
-        localStorage.removeItem(this.name);
-        update();
-    }
-    /*function setGesamtpreis(): void {
+    function setGesamtpreis() {
         pGesamtpreis.innerHTML = "" + gesamtPreis.toFixed(2) + " € ";
-    }*/
-    function handleRemoveAll(_event) {
-        localStorage.clear();
-        update();
     }
 })(Eismanufaktur || (Eismanufaktur = {}));
 //# sourceMappingURL=Warenkorb.js.map

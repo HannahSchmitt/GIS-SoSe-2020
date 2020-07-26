@@ -3,7 +3,6 @@ namespace Eismanufaktur {
     let contentDiv: HTMLDivElement;
     let pGesamtpreis: HTMLParagraphElement;
     let gesamtPreis: number;
-    let warenkorbLoeschen: HTMLParagraphElement;
 
     let sendData: HTMLButtonElement = <HTMLButtonElement>document.getElementById("send");
     sendData.addEventListener("click", sendButtonfunction);
@@ -13,8 +12,6 @@ namespace Eismanufaktur {
     function init(_event: Event): void {
         contentDiv = <HTMLDivElement>document.querySelector(".warenliste");
         pGesamtpreis = <HTMLParagraphElement>document.querySelector("#total");
-        warenkorbLoeschen = <HTMLParagraphElement>document.querySelector("#gesamtLoeschen");
-        warenkorbLoeschen.addEventListener("click", handleRemoveAll);
         update();
         document.getElementById("warenkorbWert")?.appendChild(pGesamtpreis);
         let gesamtPreisDiv: HTMLDivElement = <HTMLDivElement>document.getElementById("countPrice");
@@ -22,6 +19,7 @@ namespace Eismanufaktur {
         gesamtPreisDiv.appendChild(gesamtPreisText).innerHTML = "gesamtPreis: " + gesamtPreis.toFixed(2) + "€";
         
         console.log(localStorage);
+        update();
     }
 
     function update(): void {
@@ -38,6 +36,7 @@ namespace Eismanufaktur {
             createDynamicContent(item);
             console.log(gesamtPreis);
         }
+        setGesamtpreis();
     }
     let formData: FormData;
 
@@ -62,40 +61,17 @@ namespace Eismanufaktur {
 
         //IMG IN DIV PACKEN
         let imgElement: HTMLImageElement = document.createElement("img");
-        imgElement.src = _inputArticle.img;
         newDiv.appendChild(imgElement);
+        imgElement.src = _inputArticle.img;
         console.log(imgElement);
 
         //NAME
         let name: HTMLParagraphElement = document.createElement("p");
         name.innerHTML = _inputArticle.name;
         newDiv.appendChild(name);
-
-        //PREIS
-        let price: HTMLParagraphElement = document.createElement("p");
-        price.innerHTML = "" + _inputArticle.preis;
-        newDiv.setAttribute("preis", price.innerHTML);
-        newDiv.appendChild(price);
-
-        //BUTTON
-        let kaufen: HTMLButtonElement = document.createElement("button");
-        kaufen.innerHTML = "Löschen";
-        newDiv.appendChild(kaufen);
-        kaufen.addEventListener("click", handleRemoveArticle.bind(_inputArticle));
     }
 
-    // tslint:disable-next-line: no-any
-    function handleRemoveArticle(this: any, _event: Event): void {
-        localStorage.removeItem(this.name);
-        update();
-    }
-
-    /*function setGesamtpreis(): void {
+    function setGesamtpreis(): void {
         pGesamtpreis.innerHTML = "" + gesamtPreis.toFixed(2) + " € ";
-    }*/
-
-    function handleRemoveAll(_event: Event): void {
-        localStorage.clear();
-        update();
-     }
+    }
 }
